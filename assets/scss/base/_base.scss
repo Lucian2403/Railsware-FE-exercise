@@ -23,6 +23,12 @@ $secondaryColorHover: darken($secondaryColor, 5%);
   box-sizing: border-box;
 }
 
+a,a:visited {
+  color: $mainColor;
+  text-decoration: none;
+  line-height: 1.9rem;
+}
+
 //FLEX CENTER MIXIN
 @mixin flexDisplay() {
   display: flex;

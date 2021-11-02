@@ -1,0 +1,29 @@
+.content {
+  &__form {
+    &--forgot-pass {
+      p {
+        text-align: right;
+        margin-top: 1rem;
+      }
+    }
+  
+    &--btn {
+      margin: 5rem 0;
+    }
+  }
+
+  &__social {
+
+    &--text {
+      color: $lightGrey;
+      text-align: center;
+      line-height: 1.9rem;
+    }
+
+    &__social-buttons {
+      margin-top: 3.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
