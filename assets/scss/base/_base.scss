@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+// Colours variables
+$darkText: #000000;
+$mainColor: #1A4F8b;
+$mainSecondColor: #385C8E;
+$lightText: #ffffff;
+$secondaryColor: #BF1541;
+$lightGrey: #c3c3c3;
+
+// Fonts variables
+$fontFamily: 'Roboto', Arial, sans-serif;
+
+// Hover variables
+$mainColorHover: darken($mainColor, 5%);
+$mainSecondColorHover: darken($mainSecondColor, 5%);
+$secondaryColorHover: darken($secondaryColor, 5%);
+
+// Setting the entire base layout 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//FLEX CENTER MIXIN
+@mixin flexDisplay() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//////////////////////////////////
+.container {
+  max-width: 80rem;
+  width: 100%;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+} 
+
+
+
+
+// 1em = 16px;
+// em for 600px is (600/16) = 37.5em
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-small {
+    @media only screen and (max-width: 21em) { @content };    //335px;
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content };    //600px;
+  }
+
+  @if $breakpoint == tab-port-small  {
+    @media only screen and (max-width: 48.875em) { @content };     //782px;
+  }
+
+  @if $breakpoint == tab-port  {
+    @media only screen and (max-width: 56.25em) { @content };     //900px;
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 70.375em) { @content };    //1126px;
+  }
+
+  @if $breakpoint == small-laptop {
+    @media only screen and (max-width: 90em) { @content };    //1440px;
+  }
+
+  @if $breakpoint == small-desktop {
+    @media only screen and (max-width: 110em) { @content };    //1700px;
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 131.25em) { @content };    //2100px;
+  }
+}
