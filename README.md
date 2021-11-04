@@ -9,4 +9,8 @@ Frontend exercise with Login, Password Recovery and Go Premium page with forms.
 5. Go to your browser and type `localhost:8080`. 
 6. From there go to the view directory and you will find all three required pages.
 
+_____________________________
+
+*The puropose of this small project is to showcase my knowledge of HTML & CSS(SCSS).*
+
 Thank you!
